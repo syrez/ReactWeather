@@ -1,5 +1,5 @@
 let axios = require('axios')
-const OPEN_WEATHER_MAP_URL ='http://api.apixu.com/v1/current.json?key=b388aa2ee9364bbaa0c62923162111';
+const OPEN_WEATHER_MAP_URL ='https://api.apixu.com/v1/current.json?key=b388aa2ee9364bbaa0c62923162111';
 
 function getTemp(location) {
 	var encodedLocation = encodeURIComponent(location)
