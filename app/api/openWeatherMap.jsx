@@ -7,7 +7,6 @@ function getTemp(location) {
 
 	return axios.get(requestUrl)
 	.then((res) => {
-		debugger;
 		if(res.data.error !== undefined){
 			throw new Error(res.data.error.message)
 		}else{

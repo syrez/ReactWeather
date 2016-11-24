@@ -14,7 +14,6 @@ class Weather extends React.Component{
 		this.setState({isLoading: true})
 
 		getTemp(location).then((temp) => {
-			debugger;
 			this.setState({
 				isLoading:false, 
 				location:location, 
