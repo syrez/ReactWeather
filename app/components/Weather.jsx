@@ -10,7 +10,6 @@ class Weather extends React.Component{
 	}
 
 	handleSearch = (location) => {
-		
 		this.setState({isLoading: true})
 
 		getTemp(location).then((temp) => {
@@ -36,10 +35,12 @@ class Weather extends React.Component{
 			}
 		}
 		return(
-			<div>
-				<h2>Get Weather</h2>
+			<div className="container weather">
+				<h2 className="text-xs-center">Get Weather</h2>
 				<WeatherForm onSearch={this.handleSearch} />
-				{renderMessage()}
+				<div className="row flex-items-xs-center">
+					{renderMessage()}
+				</div>
 			</div>
 		)
 	}

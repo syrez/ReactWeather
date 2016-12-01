@@ -3,14 +3,25 @@ import {Link, IndexLink} from 'react-router'
 
 class Nav extends React.Component{
 
+	onSearch = (e) => {
+		e.preventDefault();
+		alert("not yet wired");
+	}
+
 	render(){
 		return(
-			<div>
-				<h2>Nav bar</h2>
-				<IndexLink to="/" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red',textDecoration:'none'}}>Get Weather </IndexLink>
-				<Link to="about" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red',textDecoration:'none'}}>About </Link>
-				<Link to="examples" activeClassName="active" activeStyle={{fontWeight:'bold',color:'red',textDecoration:'none'}}>Exemples </Link>
-			</div>
+			<nav className="navbar navbar-light bg-faded">
+				<div className="container">
+						<Link className="nav-item nav-link" to="/">Rweather</Link>
+						<IndexLink className="nav-item nav-link" to="/" activeClassName="active">Get Weather </IndexLink>
+						<Link className="nav-item nav-link" to="about" activeClassName="active">About </Link>
+						<Link className="nav-item nav-link" to="examples" activeClassName="active">Exemples </Link>
+						<form className="form-inline float-xs-right" onSubmit={this.onSearch}>
+	    					<input className="form-control" type="text" placeholder="Search"/>
+	    					<button className="btn btn-outline-warning" type="submit">Search</button>
+	  					</form>
+				</div>		
+			</nav>
 		)
 	}
 }

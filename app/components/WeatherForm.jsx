@@ -17,13 +17,13 @@ class WeatherForm extends React.Component{
 
 	render(){
 		return(
-			<div>
+			<div className="">
 				<form>
-					<div>
-						<input type="text" ref="location" />
+					<div className="mx-auto col-xs-12 col-sm-5">
+						<input className="form-control" ref="location" />
 					</div>
-					<div>
-						<button onClick={this.onFormSubmit} >Get weather</button>
+					<div className="row flex-items-xs-center">
+						<button className="btn btn-warning" onClick={this.onFormSubmit} >Get weather</button>
 					</div>
 				</form>
 			</div>

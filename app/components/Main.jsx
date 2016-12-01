@@ -7,7 +7,7 @@ class Main extends React.Component {
     return (
       <div>
 			 <Nav />
-    	 <div className="container">
+    	 <div className="row flex-items-xs-center">
 			 {this.props.children}
     	 </div>
 		  </div>
